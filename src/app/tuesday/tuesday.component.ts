@@ -8,11 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class TuesdayComponent implements OnInit {
 
   status: string;
+  buttonDisabled: boolean;
   constructor() {
     this.status = 'Awesome';
   }
 
+  handle() {
+    this.status = '';
+  }
+
   ngOnInit() {
+    setTimeout(() => {this.buttonDisabled = true;}, 2000);
   }
 
 }

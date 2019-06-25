@@ -1,5 +1,6 @@
 <div>
-  <p>{{status}}</p>
   <input type="text" [(ngModel)]='status' />
   <p>{{status.split('').reverse().join('')}}</p>
+  <button (click)="handle()">Clear</button> <br>
+  <button [disabled]="buttonDisabled">Timed</button>
 </div>
