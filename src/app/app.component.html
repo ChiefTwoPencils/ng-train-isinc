@@ -22,13 +22,13 @@
   <div class="row">
     <div class="col-xs-12">
       <h3>App Component</h3>
-      <p>This is app component details...</p>
+      <p>{{content}}</p>
       <hr/>
       <app-product></app-product>
       <hr>
       <app-inventory></app-inventory>
       <hr>
-      <app-tuesday></app-tuesday>
+      <app-tuesday [status]="appStatus" (parEvent)="onTuesdayUpdate($event)"></app-tuesday>
     </div>
   </div>
 </div>

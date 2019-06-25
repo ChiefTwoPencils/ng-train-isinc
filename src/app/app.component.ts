@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-first-app';
+  appStatus = "status : good";
+  content: string;
+
+  onTuesdayUpdate(event: Object) {
+    this.content = Object.keys(event).join('<b/>');
+  }
 }

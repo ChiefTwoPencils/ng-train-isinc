@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-tuesday',
@@ -7,14 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TuesdayComponent implements OnInit {
 
-  status: string;
+  @Input() status: string;
+  @Output() parEvent = new EventEmitter();
   buttonDisabled: boolean;
   constructor() {
     this.status = 'Awesome';
   }
 
   handle() {
+    this.parEvent.emit();
     this.status = '';
+    
+  }
+
+  onInputUpdate() {
+    console.log('text entered in text box.');
   }
 
   ngOnInit() {

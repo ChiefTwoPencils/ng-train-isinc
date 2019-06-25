@@ -1,6 +1,7 @@
 <div>
-  <input type="text" [(ngModel)]='status' />
+  <input class="form-control" type="text" [(ngModel)]='status' /> <br>
+  <input class="form-control" type="text" (input)='onInputUpdate()' />
   <p>{{status.split('').reverse().join('')}}</p>
-  <button (click)="handle()">Clear</button> <br>
-  <button [disabled]="buttonDisabled">Timed</button>
+  <button class="btn btn-primary" (click)="handle()">Clear</button> <br>
+  <button class="btn btn-default" [disabled]="buttonDisabled">Timed</button>
 </div>
