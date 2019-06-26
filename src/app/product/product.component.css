@@ -1,3 +1,13 @@
 div {
     background-color: goldenrod;    
 }
+
+.instock {
+    background: darkseagreen;
+    color: white;
+}
+
+.notinstock {
+    background: darkred;
+    color: white;
+}
